@@ -109,6 +109,7 @@ function callCmd(cmd, name, client, evt, suffix) {
 function onMessage(evt) {
   if (!evt.message) return;
   if (client.User.id === evt.message.author.id) return;
+  //need to edit here to not return if bot is pk proxy
   if (evt.message.author.bot) return;
 
   if (!evt.message.channel.isPrivate) {
